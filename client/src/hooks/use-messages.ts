@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { api, type InsertMessage } from "@shared/routes";
+import { api, type MessageInput } from "@shared/routes";
 import { useToast } from "@/hooks/use-toast";
 
 export function useCreateMessage() {
@@ -7,7 +7,7 @@ export function useCreateMessage() {
   const { toast } = useToast();
 
   return useMutation({
-    mutationFn: async (data: InsertMessage) => {
+    mutationFn: async (data: MessageInput) => {
       const validated = api.messages.create.input.parse(data);
       const res = await fetch(api.messages.create.path, {
         method: api.messages.create.method,
