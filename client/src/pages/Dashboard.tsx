@@ -33,10 +33,12 @@ export default function Dashboard() {
           </p>
         </div>
         <div className="flex gap-3">
-          <Button variant="outline" className="rounded-xl border-border hover:bg-muted/50">
-            <Download className="mr-2 h-4 w-4" />
-            Resume
-          </Button>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" className="rounded-xl border-border hover:bg-muted/50">
+              <Download className="mr-2 h-4 w-4" />
+              Resume
+            </Button>
+          </a>
           <Link href="/contact">
             <Button className="rounded-xl shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all">
               Contact Me
