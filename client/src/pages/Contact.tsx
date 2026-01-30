@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { insertMessageSchema, type InsertMessage } from "@shared/schema";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Mail, Phone, MapPin, Send, Linkedin, Github } from "lucide-react";
+import { SiInstagram } from "react-icons/si";
 import { motion } from "framer-motion";
 
 export default function Contact() {
@@ -165,6 +166,14 @@ export default function Contact() {
                   className="w-10 h-10 rounded-lg bg-white border border-border flex items-center justify-center text-muted-foreground hover:text-black hover:border-black transition-all shadow-sm"
                 >
                   <Github className="w-5 h-5" />
+                </a>
+                <a 
+                  href="https://www.instagram.com/jayylikhar/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-lg bg-white border border-border flex items-center justify-center text-muted-foreground hover:text-[#E4405F] hover:border-[#E4405F] transition-all shadow-sm"
+                >
+                  <SiInstagram className="w-5 h-5" />
                 </a>
               </div>
             </div>

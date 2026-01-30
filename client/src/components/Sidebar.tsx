@@ -10,6 +10,7 @@ import {
   Linkedin,
   ExternalLink
 } from "lucide-react";
+import { SiInstagram } from "react-icons/si";
 import { cn } from "@/lib/utils";
 
 export function Sidebar() {
@@ -81,6 +82,16 @@ export function Sidebar() {
           >
             <Linkedin className="w-4 h-4" />
             LinkedIn
+            <ExternalLink className="w-3 h-3 ml-auto opacity-50" />
+          </a>
+          <a
+            href="https://www.instagram.com/jayylikhar/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm text-muted-foreground hover:bg-white hover:text-foreground hover:shadow-sm border border-transparent hover:border-border transition-all"
+          >
+            <SiInstagram className="w-4 h-4" />
+            Instagram
             <ExternalLink className="w-3 h-3 ml-auto opacity-50" />
           </a>
         </div>
