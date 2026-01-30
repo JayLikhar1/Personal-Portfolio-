@@ -7,21 +7,21 @@ const certifications = [
   {
     title: "Deloitte Australia Technology Job Simulation",
     issuer: "Forage",
-    date: "2024",
+    date: "Jan 2026",
     link: "https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_qRjPNgXnx3DYaNCTk_1769744134946_completion_certificate.pdf",
     skills: ["Technology Consulting", "Data Analysis", "Client Communication"]
   },
   {
     title: "SQL (Intermediate)",
     issuer: "HackerRank",
-    date: "2023",
+    date: "Nov 2025",
     link: "https://www.hackerrank.com/certificates/iframe/63dbe4adafff",
     skills: ["Complex Queries", "Joins", "Aggregations", "Indexing"]
   },
   {
     title: "Python (Basic)",
     issuer: "HackerRank",
-    date: "2023",
+    date: "Dec 2024",
     link: "https://www.hackerrank.com/certificates/iframe/77fab85a4200",
     skills: ["Data Structures", "Control Flow", "Functions", "OOP"]
   }
