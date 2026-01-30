@@ -1,0 +1,273 @@
+(React Portfolio – Dashboard-style UI)
+
+You are a senior frontend engineer and UI/UX designer working on a production-quality personal portfolio website.
+
+Your task is to build and polish a complete React + Tailwind CSS portfolio frontend, inspired by a modern enterprise dashboard UI (clean, card-based, professional), similar in design language to a Resume Analyzer SaaS — but this is NOT an ATS or resume tool.
+
+Use the layout, spacing, cards, typography, and visual hierarchy from enterprise dashboards, and repurpose them into a personal portfolio.
+
+🔹 PERSONAL INFORMATION (USE EXACTLY)
+
+Name: Jay Likhar
+Title / Role: Full Stack & Data Science Engineer
+
+Email: jaylikhar9@gmail.com
+
+Phone: +91-9529212362
+
+LinkedIn: https://linkedin.com/in/jay-likhar
+
+GitHub: https://github.com/jaylikhar1
+
+🔹 ABOUT SECTION CONTENT
+
+Use this exact text (you may reflow but not change meaning):
+
+Computer Science Engineering student with hands-on experience in data analytics, machine learning, and full-stack application development. Proven ability to build ML-driven web applications and dashboards, and translate analytical outputs into business-ready insights. Strong focus on clean architecture, scalable systems, and data-driven problem solving.
+
+Display this inside a dashboard-style card, not a plain paragraph.
+
+🔹 SKILLS SECTION (CARD-BASED, GROUPED)
+
+Render skills as separate cards or grouped panels, similar to enterprise dashboards.
+
+Programming
+
+Python
+
+SQL
+
+C++
+
+Frameworks & Tools
+
+React
+
+Flask
+
+FastAPI
+
+MongoDB
+
+Data & Machine Learning
+
+Exploratory Data Analysis
+
+Feature Engineering
+
+Clustering
+
+Model Evaluation
+
+Visualization
+
+Streamlit
+
+Power BI
+
+Tableau
+
+🔹 PROJECTS SECTION (MOST IMPORTANT)
+
+Render projects as professional cards, NOT flashy, NOT animated heavily.
+
+Each project card MUST contain:
+
+Project title
+
+2–3 line description
+
+Tech stack tags
+
+Buttons: GitHub and Live Demo (use placeholder links if unknown)
+
+Projects to include:
+1️⃣ Advanced Amazon Customer Segmentation
+
+Tech: Python, SQL, Scikit-learn, Streamlit
+Description:
+
+Performed exploratory data analysis on customer demographics and purchasing behavior
+
+Engineered behavioral features and applied K-Means clustering
+
+Generated actionable customer segments to support marketing strategy
+
+
+
+Live Demo: https://amazon-customer-segmentation-ghzq6fsiyhj4vpjarcfusn.streamlit.app/
+
+
+2️⃣ Smart Study Scheduler
+
+Tech: React, Flask, MongoDB, Scikit-learn
+Description:
+
+Built a full-stack study planning platform with JWT-based authentication
+
+Implemented ML-driven scheduling logic
+
+Improved study efficiency by approximately 25–30%
+
+
+
+Live Demo: https://smart-study-scheduler-8b7c-git-main-jaylikhar1s-projects.vercel.app/
+
+
+3️⃣ Accessibility Analyzer
+
+Tech: FastAPI, WCAG 2.0, Machine Learning
+Description:
+
+Developed a web-based accessibility evaluation tool
+
+Generated severity-weighted accessibility scores
+
+Provided insights for inclusive and compliant UI design
+
+Live Demo: https://accessibility-analyzer-git-main-jaylikhar1s-projects.vercel.app/
+
+
+
+4. AI-Powered Conversational ChatBot (LangChain + Grok API)
+
+Tech Stack:
+
+Python
+
+LangChain
+
+Grok API (LLM)
+
+Flask / Streamlit
+
+Prompt Engineering
+
+Contextual Memory
+
+Description:
+
+Designed and developed an AI-powered conversational chatbot using LangChain for orchestration and Grok API as the large language model
+
+Implemented multi-turn, context-aware conversations using memory pipelines
+
+Applied prompt engineering techniques to improve response accuracy and reduce hallucinations
+
+Built a clean, real-time chat interface for natural language interaction
+
+Key Highlights (display as small tags or sub-cards):
+
+LLM-powered reasoning
+
+Context-aware dialogue
+
+Modular prompt pipelines
+
+Scalable AI architecture
+
+
+
+Live Demo: https://ai-chatbot-by-jay-ct6zsdpii6bbyk3q9lz4wv.streamlit.app/
+
+
+
+🔹 CERTIFICATIONS SECTION (WITH LINKS)
+
+Display certifications as clean cards or list tiles with external links.
+
+Deloitte Australia Technology Job Simulation
+Platform: Forage
+🔗 https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_qRjPNgXnx3DYaNCTk_1769744134946_completion_certificate.pdf
+
+SQL (Intermediate) – HackerRank
+🔗 https://www.hackerrank.com/certificates/iframe/63dbe4adafff
+
+Python (Basic) – HackerRank
+🔗 https://www.hackerrank.com/certificates/iframe/77fab85a4200
+
+🔹 CONTACT SECTION
+
+Create a professional contact card with icons and links:
+
+📧 Email: jaylikhar9@gmail.com
+
+💼 LinkedIn: https://linkedin.com/in/jay-likhar
+
+🧑‍💻 GitHub: https://github.com/jaylikhar1
+
+Optional: “Open to internships and entry-level roles”
+
+🔹 UI & DESIGN REQUIREMENTS (VERY IMPORTANT)
+
+White background
+
+Card-based layout
+
+Soft shadows
+
+Rounded corners (lg / xl)
+
+Blue primary accent color
+
+Enterprise / consulting dashboard look
+
+Plenty of whitespace
+
+No charts, no progress rings, no ATS elements
+
+Minimal animations only (hover, subtle transitions)
+
+Think: Deloitte / internal enterprise dashboard, not a startup landing page.
+
+🔹 TECH CONSTRAINTS
+
+React (Vite)
+
+Tailwind CSS only
+
+No backend
+
+No APIs
+
+No resume upload
+
+No ATS logic
+
+Clean, readable, scalable code
+
+🔹 EXPECTED FILE STRUCTURE
+
+Follow and improve this structure if needed:
+
+src/
+ ├─ components/
+ │   ├─ Navbar.jsx
+ │   ├─ ProjectCard.jsx
+ │   ├─ CertificationCard.jsx
+ │   ├─ SkillCard.jsx
+ │
+ ├─ sections/
+ │   ├─ About.jsx
+ │   ├─ Skills.jsx
+ │   ├─ Projects.jsx
+ │   ├─ Certifications.jsx
+ │   ├─ Contact.jsx
+ │
+ ├─ App.jsx
+ ├─ main.jsx
+
+🎯 FINAL GOAL
+
+Produce a polished, recruiter-ready React portfolio frontend that:
+
+Looks like a real enterprise internal tool
+
+Demonstrates frontend engineering maturity
+
+Clearly showcases projects, skills, and certifications
+
+Is suitable for MNCs, Big-4, and tech internships
+
+Do not generate generic templates.
+Do not over-animate.
+Do not remove provided content.
