@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { insertMessageSchema, messages } from "./schema";
+import { insertMessageSchema, type Message } from "./schema";
 
 export const api = {
   messages: {
@@ -8,7 +8,7 @@ export const api = {
       path: "/api/messages",
       input: insertMessageSchema,
       responses: {
-        201: z.custom<typeof messages.$inferSelect>(),
+        201: z.custom<Message>(),
         400: z.object({ message: z.string() }),
       },
     },
