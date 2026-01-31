@@ -3,9 +3,9 @@ import type { Server } from "http";
 import { storage } from "./storage";
 import { api } from "@shared/routes";
 import { z } from "zod";
-import { Resend } from "resend";
+import { createEmailService } from "./email";
 
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+const emailService = createEmailService();
 
 export async function registerRoutes(
   httpServer: Server,
@@ -17,26 +17,24 @@ export async function registerRoutes(
       const input = api.messages.create.input.parse(req.body);
       const message = await storage.createMessage(input);
 
-      if (resend) {
+      // Send email notifications if email service is available
+      if (emailService) {
         try {
-          await resend.emails.send({
-            from: "Portfolio Contact <onboarding@resend.dev>",
-            to: "jaylikhar9@gmail.com",
-            subject: `New Contact Form Message from ${input.name}`,
-            html: `
-              <h2>New Message Received</h2>
-              <p><strong>Name:</strong> ${input.name}</p>
-              <p><strong>Email:</strong> ${input.email}</p>
-              <p><strong>Message:</strong></p>
-              <p>${input.message}</p>
-            `,
-          });
+          // Send notification to site owner
+          await emailService.sendContactNotification(input.name, input.email, input.message);
+          console.log("✅ Contact notification sent successfully");
+
+          // Optionally send welcome email to the person who contacted
+          if (emailService.sendWelcomeEmail) {
+            await emailService.sendWelcomeEmail(input.email, input.name);
+            console.log("✅ Welcome email sent successfully");
+          }
         } catch (emailError) {
-          console.error("Error sending email:", emailError);
+          console.error("❌ Error sending email notifications:", emailError);
           // Don't fail the request if email fails, as message is already saved
         }
       } else {
-        console.warn("RESEND_API_KEY not set, skipping email notification");
+        console.warn("⚠️  Email service not configured, skipping notifications");
       }
 
       res.status(201).json(message);
@@ -47,7 +45,8 @@ export async function registerRoutes(
           field: err.errors[0].path.join('.'),
         });
       }
-      throw err;
+      console.error("❌ Error processing contact form:", err);
+      res.status(500).json({ message: "Internal server error" });
     }
   });
 
